@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Browse the LEGO Database catalogue with sets from Marvel, Ninjago, Star Wars, and more.">
+    <meta name="keywords" content="LEGO, catalogue, sets, Marvel, Ninjago, Star Wars">
+    <meta name="author" content="Ashton Spykerman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO Catalogue</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #ffcc00;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            color: #000;
+            transition: transform 0.5s;
+        }
+
+        h1:hover {
+            transform: scale(1.1);
+            color: #0000ff;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .set-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .set-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .set-card img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        .set-card h3 {
+            margin: 10px 0 5px;
+            color: #000;
+        }
+
+        .set-card p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        a button {
+            margin: 5px;
+            background-color: #000;
+            color: #ffcc00;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        a button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #ffcc00;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LEGO Catalogue</h1>
+        <p>Explore our collection of LEGO sets</p>
+    </header>
+
+    <section>
+        <!-- Example set cards -->
+        <div class="set-card">
+            <img src="marvel-set.jpg" alt="Marvel LEGO Set">
+            <h3>Marvel Avengers Set</h3>
+            <p>Includes Iron Man, Captain America, and Thor minifigures.</p>
+        </div>
+
+        <div class="set-card">
+            <img src="starwars-set.jpg" alt="Star Wars LEGO Set">
+            <h3>Star Wars X-Wing</h3>
+            <p>Recreate epic space battles with this detailed X-Wing model.</p>
+        </div>
+
+        <div class="set-card">
+            <img src="ninjago-set.jpg" alt="Ninjago LEGO Set">
+            <h3>Ninjago Dragon Set</h3>
+            <p>Battle evil forces with the Ninjago Dragon and minifigures.</p>
+        </div>
+
+        <!-- Add more sets as needed -->
+    </section>
+
+    <div>
+        <a href="index.html"><button>Home</button></a>
+        <a href="contact.html"><button>Contact Us</button></a>
+        <a href="info.html"><button>About This Site</button></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The LEGO Database</p>
+    </footer>
+</body>
+</html>

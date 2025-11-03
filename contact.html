@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact The LEGO Database for questions, feedback, or support.">
+    <meta name="keywords" content="LEGO, database, contact, support, feedback, help">
+    <meta name="author" content="Ashton Spykerman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The LEGO Database</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #ffcc00;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            color: #000;
+            transition: transform 0.5s;
+        }
+
+        h1:hover {
+            transform: scale(1.1);
+            color: #0000ff;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #000;
+            color: #ffcc00;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 150px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        a button {
+            margin: 5px;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #ffcc00;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact The LEGO Database</h1>
+        <p>We’d love to hear from you!</p>
+    </header>
+
+    <section>
+        <p>If you have questions, feedback, or suggestions, please fill out the form below and we will get back to you as soon as possible.</p>
+
+        <form id="contactForm" action="submit_form.html" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <div>
+        <a href="index.html"><button>Home</button></a>
+        <a href="catalogue.html"><button>Catalogue</button></a>
+        <a href="info.html"><button>About This Site</button></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The LEGO Database</p>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            const name = this.name.value.trim();
+            const email = this.email.value.trim();
+            const message = this.message.value.trim();
+
+            if (!name || !email || !message) {
+                alert("Please fill out all fields before submitting!");
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
