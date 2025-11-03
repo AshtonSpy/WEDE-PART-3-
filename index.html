@@ -9,95 +9,41 @@
     <title>The LEGO Database</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            background-color: #ffcc00;
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
         .welcome-text {
             transition: transform 0.6s ease-in-out;
             color: #000;
-            margin: 0;
         }
-
         .welcome-text:hover {
             transform: scale(1.1);
-            color: #0000ff; /* Changed hover color for visibility */
+            color: #ffcc00;
         }
-
-        section {
-            max-width: 700px;
-            margin: 20px auto;
-            text-align: center;
-            font-size: 1.2em;
-        }
-
-        form {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
         form input {
             padding: 8px;
             border-radius: 6px;
             border: 1px solid #ccc;
-            width: 250px;
         }
-
         form button {
             background-color: #ffcc00;
             border: none;
             padding: 8px 15px;
             cursor: pointer;
             border-radius: 6px;
-            transition: background-color 0.3s;
         }
-
-        form button:hover {
-            background-color: #e6b800;
-        }
-
-        img {
-            display: block;
-            margin: 20px auto;
-        }
-
-        a button {
-            margin: 5px;
-            background-color: #000;
-            color: #ffcc00;
-            padding: 10px 15px;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        a button:hover {
-            background-color: #333;
-        }
-
-        footer {
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #ffcc00;
-            width: 100%;
+        .nav-buttons {
             text-align: center;
+            margin: 20px 0;
+        }
+        .nav-buttons a button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+        .nav-buttons a button:hover {
+            background-color: #e6b800;
         }
     </style>
 </head>
@@ -108,25 +54,26 @@
     </header>
 
     <section>
-        <p>
+        <p style="max-width: 600px; margin: 0 auto; font-size: 1.2em;">
             Welcome to <strong>The LEGO Database</strong>! Search and browse LEGO sets from multiple categories. 
             Find Marvel, Star Wars, Ninjago, or collectible Minifigures — all in one place.
         </p>
     </section>
-    
+
+    <!-- Search Form with JS validation -->
     <form id="searchForm" action="search.html" method="get">
-        <input type="text" id="searchInput" name="query" placeholder="Search LEGO sets..." />
-        <button type="submit">🔍 Search</button>
+        <input type="text" id="searchInput" name="query" placeholder="Search LEGO..." />
+        <button type="submit">🔍</button>
     </form>
 
-    <img src="Images_/Brick.jpg" alt="LEGO Brick" width="200" height="200">
-
+    <img src="Images_/Brick.jpg" alt="LEGO Brick" width="200" height="200"><br><br>
 
     <!-- Navigation Buttons -->
-    <div>
-        <a href="catalogue.html"><button>Catalogue</button></a>
+    <div class="nav-buttons">
+        <a href="catalogue.html"><button>Catalogue Page</button></a>
         <a href="contact.html"><button>Contact Us</button></a>
-        <a href="info.html"><button>About This Site</button></a>
+        <a href="info.html"><button>Learn More About This Site</button></a>
+        <a href="enquiries.html"><button>Ask us</button></a>
     </div>
 
     <footer>

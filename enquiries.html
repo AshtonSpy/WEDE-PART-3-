@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Send your questions or enquiries to The LEGO Database team.">
+    <meta name="keywords" content="LEGO, enquiries, questions, contact">
+    <meta name="author" content="Ashton Spykerman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO Enquiries</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffeb3b;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        form button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+        form button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Send an Enquiry</h1>
+        <p>Have a question about missing LEGO sets? Send it here!</p>
+    </header>
+
+    <form id="enquiryForm" action="submit_enquiry.php" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="question" placeholder="Your Question" rows="6" required></textarea>
+        <button type="submit">Submit Enquiry</button>
+    </form>
+
+    <div class="nav-buttons">
+        <a href="index.html"><button>Home</button></a>
+        <a href="catalogue.html"><button>Catalogue</button></a>
+        <a href="contact.html"><button>Contact</button></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The LEGO Database</p>
+    </footer>
+
+    <script>
+        document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+            const name = this.name.value.trim();
+            const email = this.email.value.trim();
+            const question = this.question.value.trim();
+
+            if (!name || !email || !question) {
+                alert("Please fill in all fields before submitting your enquiry!");
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
