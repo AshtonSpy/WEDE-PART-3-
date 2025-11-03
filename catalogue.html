@@ -8,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEGO Catalogue</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    
     <style>
-        /* Grid and card layout */
         section {
             max-width: 900px;
             margin: 20px auto;
@@ -19,7 +22,6 @@
             text-align: center;
         }
 
-        /* Card styling */
         .set-card {
             background-color: #fff;
             border-radius: 10px;
@@ -33,13 +35,13 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        /* Image styling */
         .set-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             display: block;
             border-radius: 6px;
+            cursor: pointer;
         }
 
         .set-card h3 {
@@ -53,7 +55,6 @@
             color: #333;
         }
 
-        /* Navigation buttons */
         .nav-buttons {
             text-align: center;
             margin: 20px 0;
@@ -82,25 +83,33 @@
 
     <section>
         <div class="set-card">
-            <img src="Images_/marvel.jpg" alt="Marvel LEGO Set">
+            <a href="Images_/marvel.jpg" data-lightbox="lego-gallery" data-title="Marvel Avengers Set">
+                <img src="Images_/marvel.jpg" alt="Marvel LEGO Set">
+            </a>
             <h3>Marvel Avengers Set</h3>
             <p>Includes Iron Man, Captain America, and Thor minifigures.</p>
         </div>
 
         <div class="set-card">
-            <img src="Images_/starwars.jpg" alt="Star Wars LEGO Set">
+            <a href="Images_/starwars.jpg" data-lightbox="lego-gallery" data-title="Star Wars X-Wing">
+                <img src="Images_/starwars.jpg" alt="Star Wars LEGO Set">
+            </a>
             <h3>Star Wars X-Wing</h3>
             <p>Recreate epic space battles with this detailed X-Wing model.</p>
         </div>
 
         <div class="set-card">
-            <img src="Images_/ninjago.jpg" alt="Ninjago LEGO Set">
+            <a href="Images_/ninjago.jpg" data-lightbox="lego-gallery" data-title="Ninjago Dragon Set">
+                <img src="Images_/ninjago.jpg" alt="Ninjago LEGO Set">
+            </a>
             <h3>Ninjago Dragon Set</h3>
             <p>Battle evil forces with the Ninjago Dragon and minifigures.</p>
         </div>
 
         <div class="set-card">
-            <img src="Images_/Brick.jpg" alt="LEGO Brick">
+            <a href="Images_/Brick.jpg" data-lightbox="lego-gallery" data-title="Classic LEGO Brick">
+                <img src="Images_/Brick.jpg" alt="LEGO Brick">
+            </a>
             <h3>Classic LEGO Brick</h3>
             <p>Essential bricks to build anything you can imagine!</p>
         </div>
@@ -115,5 +124,14 @@
     <footer>
         <p>&copy; 2025 The LEGO Database</p>
     </footer>
+
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true
+        })
+    </script>
 </body>
 </html>
