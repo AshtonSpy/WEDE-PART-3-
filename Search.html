@@ -17,10 +17,16 @@
             width: 120px;
             height: 120px;
             margin-right: 15px;
+            object-fit: cover;
         }
         .result-content {
             display: flex;
             align-items: center;
+        }
+        h2.section-title {
+            text-align: center;
+            margin-top: 40px;
+            color: #000;
         }
     </style>
 </head>
@@ -47,36 +53,40 @@
             `);
         }
 
+        // Store all sets
+        const sets = [
+            {title: "LEGO Ninjago", img: "Images_/ninjago.jpg", desc: "Epic battles with ninjas, dragons, and temples!"},
+            {title: "LEGO Marvel", img: "Images_/marvel.jpg", desc: "Avengers, Spider-Man, Iron Man and more heroes!"},
+            {title: "LEGO Star Wars", img: "Images_/starwars.jpg", desc: "Build X-Wings, the Millennium Falcon, and fight the Empire!"},
+            {title: "LEGO Minifigures", img: "Images_/minifigures.jpg", desc: "Collectible characters from many LEGO themes!"}
+        ];
+
+        // Show matching results first
+        let matches = sets.filter(set => query && set.title.toLowerCase().includes(query));
         if (query.includes("discounts")) {
             document.write("<h2>Discounts</h2>");
             document.write("<p>There are no discounts available at this time.</p><br>");
         }
-
-        if (query.includes("ninjago")) {
-            showResult("LEGO Ninjago", "ninjago.jpg", "Epic battles with ninjas, dragons, and temples!");
-        }
-        if (query.includes("marvel")) {
-            showResult("LEGO Marvel", "marvel.jpg", "Avengers, Spider-Man, Iron Man and more heroes!");
-        }
-        if (query.includes("starwars")) {
-            showResult("LEGO Star Wars", "starwars.jpg", "Build X-Wings, the Millennium Falcon, and fight the Empire!");
-        }
-        if (query.includes("minifigures")) {
-            showResult("LEGO Minifigures", "minifigures.jpg", "Collectible characters from many LEGO themes!");
+        if (matches.length > 0) {
+            document.write("<h2 class='section-title'>Matching Results</h2>");
+            matches.forEach(set => showResult(set.title, set.img, set.desc));
+        } else {
+            document.write("<h2 class='section-title'>No direct matches found</h2>");
         }
 
-        // Always show all results
-        showResult("LEGO Ninjago", "ninjago.jpg", "Epic battles with ninjas, dragons, and temples!");
-        showResult("LEGO Marvel", "marvel.jpg", "Avengers, Spider-Man, Iron Man and more heroes!");
-        showResult("LEGO Star Wars", "starwars.jpg", "Build X-Wings, the Millennium Falcon, and fight the Empire!");
-        showResult("LEGO Minifigures", "minifigures.jpg", "Collectible characters from many LEGO themes!");
+        // Show "Our Other Sets" section for remaining sets
+        const otherSets = sets.filter(set => !matches.includes(set));
+        if (otherSets.length > 0) {
+            document.write("<h2 class='section-title'>Our Other Sets</h2>");
+            otherSets.forEach(set => showResult(set.title, set.img, set.desc));
+        }
     </script>
 
     <br><br>
     <a href="index.html"><button>Back to Home</button></a>
 
     <footer>
-        <p>&copy; 2025 The LEGO Database</p>
+        <p> 2025 The LEGO Database</p>
     </footer>
 </body>
 </html>

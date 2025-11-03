@@ -3,41 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Browse the LEGO Database catalogue with sets from Marvel, Ninjago, Star Wars, and more.">
-    <meta name="keywords" content="LEGO, catalogue, sets, Marvel, Ninjago, Star Wars">
+    <meta name="keywords" content="LEGO, catalogue, Marvel, Star Wars, Ninjago, sets">
     <meta name="author" content="Ashton Spykerman">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEGO Catalogue</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            background-color: #ffcc00;
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            margin: 0;
-            color: #000;
-            transition: transform 0.5s;
-        }
-
-        h1:hover {
-            transform: scale(1.1);
-            color: #0000ff;
-        }
-
+        /* Grid and card layout */
         section {
             max-width: 900px;
             margin: 20px auto;
@@ -47,6 +19,7 @@
             text-align: center;
         }
 
+        /* Card styling */
         .set-card {
             background-color: #fff;
             border-radius: 10px;
@@ -60,8 +33,12 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
+        /* Image styling */
         .set-card img {
             width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
             border-radius: 6px;
         }
 
@@ -76,63 +53,63 @@
             color: #333;
         }
 
-        a button {
-            margin: 5px;
-            background-color: #000;
-            color: #ffcc00;
-            padding: 10px 15px;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        a button:hover {
-            background-color: #333;
-        }
-
-        footer {
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #ffcc00;
-            width: 100%;
+        /* Navigation buttons */
+        .nav-buttons {
             text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav-buttons a button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        .nav-buttons a button:hover {
+            background-color: #e6b800;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>LEGO Catalogue</h1>
-        <p>Explore our collection of LEGO sets</p>
+        <p>Browse popular LEGO sets from multiple categories!</p>
     </header>
 
     <section>
-        <!-- Example set cards -->
         <div class="set-card">
-            <img src="marvel-set.jpg" alt="Marvel LEGO Set">
+            <img src="Images_/marvel.jpg" alt="Marvel LEGO Set">
             <h3>Marvel Avengers Set</h3>
             <p>Includes Iron Man, Captain America, and Thor minifigures.</p>
         </div>
 
         <div class="set-card">
-            <img src="starwars-set.jpg" alt="Star Wars LEGO Set">
+            <img src="Images_/starwars.jpg" alt="Star Wars LEGO Set">
             <h3>Star Wars X-Wing</h3>
             <p>Recreate epic space battles with this detailed X-Wing model.</p>
         </div>
 
         <div class="set-card">
-            <img src="ninjago-set.jpg" alt="Ninjago LEGO Set">
+            <img src="Images_/ninjago.jpg" alt="Ninjago LEGO Set">
             <h3>Ninjago Dragon Set</h3>
             <p>Battle evil forces with the Ninjago Dragon and minifigures.</p>
         </div>
 
-        <!-- Add more sets as needed -->
+        <div class="set-card">
+            <img src="Images_/Brick.jpg" alt="LEGO Brick">
+            <h3>Classic LEGO Brick</h3>
+            <p>Essential bricks to build anything you can imagine!</p>
+        </div>
     </section>
 
-    <div>
+    <div class="nav-buttons">
         <a href="index.html"><button>Home</button></a>
-        <a href="contact.html"><button>Contact Us</button></a>
-        <a href="info.html"><button>About This Site</button></a>
+        <a href="contact.html"><button>Contact</button></a>
+        <a href="info.html"><button>Learn More</button></a>
     </div>
 
     <footer>
