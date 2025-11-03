@@ -27,3 +27,5 @@ Screenshot
 Updated. 11/03/2025
 
 All pages of the LEGO Database website were updated for a consistent LEGO theme using yellow and black colors, standard fonts, and responsive layouts. Hover effects were added to headings and buttons, and navigation buttons were styled and aligned uniformly. The search form on the homepage and the contact form were styled with rounded inputs and buttons, with JavaScript validation to ensure proper input. The info page was formatted with headings and lists for clarity, while the catalogue page had fixed image sizing, responsive grid layout, and hover effects on set cards. All images were placed in an /images folder with updated paths so they display correctly, ensuring the entire site is visually consistent and user-friendly.
+
+and lastly added a question page for the user to send question about the site or their sets they might be looking for
